@@ -15,22 +15,22 @@ let currentPokemon;
 
 // Function to fetch a random Pokémon
 async function fetchRandomPokemon() {
-    const randomPokemonId = Math.floor(Math.random() * 898) + 1; // There are 898 Pokémon in total
+    const randomPokemonId = Math.floor(Math.random() * 898) + 1; 
     const response = await fetch(`${pokemonApiUrl}${randomPokemonId}`);
     const data = await response.json();
     currentPokemon = data;
     displayPokemon(data.sprites.front_default);
-    correctGeneration = data.generation.name;
+    correctGeneration = data.species.name;
     displayGenerationButtons();
 }
 
-// Function to display the Pokémon sprite
+//Display the Pokémon sprite
 function displayPokemon(spriteUrl) {
     const pokemonImage = document.getElementById('pokemon-sprite');
     pokemonImage.src = spriteUrl;
 }
 
-// Function to display generation buttons
+//Display generation buttons
 function displayGenerationButtons() {
     const generationButtons = document.getElementById('generation-buttons');
     generationButtons.innerHTML = ''; // Clear previous buttons
@@ -57,7 +57,7 @@ function generateRandomGenerations(correctGen) {
     return shuffleArray(generations);
 }
 
-// Function to shuffle array
+// Shuffle array
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -72,7 +72,7 @@ function getGenerationName(generation) {
     return generationNames[genIndex];
 }
 
-// Function to handle guess
+//handle guess
 function handleGuess(guessedGeneration) {
     if (guessedGeneration === correctGeneration) {
         alert('Correct! You earned 1 point.');
@@ -83,7 +83,7 @@ function handleGuess(guessedGeneration) {
     }
 }
 
-// Function to display game over screen
+//display game over screen
 function gameOver() {
     const gameOverScreen = document.getElementById('game-over');
     const generationButtons = document.getElementById('generation-buttons');
@@ -91,7 +91,7 @@ function gameOver() {
     gameOverScreen.style.display = 'block';
 }
 
-// Function to reset the game
+//reset the game
 function resetGame() {
     const gameOverScreen = document.getElementById('game-over');
     const generationButtons = document.getElementById('generation-buttons');
@@ -100,7 +100,7 @@ function resetGame() {
     fetchRandomPokemon();
 }
 
-// Event listener for play again button
+//play again button
 document.getElementById('play-again').addEventListener('click', function() {
     resetGame();
 });
