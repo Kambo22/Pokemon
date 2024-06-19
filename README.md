@@ -2,7 +2,7 @@ Welcome to the Guess the Pokémon Generation game! This project is a fun and int
 
 HTML Structure:
 The HTML structure consists of a simple layout with a header, an image for displaying the Pokémon sprite, a div for generation buttons, and a game over screen.
-code
+https://github.com/Kambo22/Pokemon/blob/25245b3338224723f90717a798c86db6f4292c8d/index.html#L1-L26
 Title and Headers: Provides the game title and main heading.
 Image Element: Displays the Pokémon sprite.
 Generation Buttons Div: Contains buttons for each generation guess.
@@ -12,7 +12,7 @@ JavaScript Code (script.js)
 The JavaScript code contains the game logic, fetching Pokémon data, displaying elements, and handling user interactions.
 
 Constants and Variables:
-code
+https://github.com/Kambo22/Pokemon/blob/25245b3338224723f90717a798c86db6f4292c8d/script.js#L1-L14
 pokemonApiUrl: The base URL for the Pokémon API.
 maxGenerations: The total number of Pokémon generations.
 generationNames: An array of generation names.
@@ -20,13 +20,13 @@ correctGeneration: Stores the correct generation for the current Pokémon.
 currentPokemon: Stores the data of the current Pokémon.
 
 Fetching and Displaying Pokémon:
-code
+https://github.com/Kambo22/Pokemon/blob/25245b3338224723f90717a798c86db6f4292c8d/script.js#L17-L32
 
 fetchRandomPokemon(): Fetches data for a random Pokémon and sets it up for display.
 displayPokemon(spriteUrl): Updates the image element with the fetched Pokémon sprite.
 
 Displaying Generation Buttons:
-code
+https://github.com/Kambo22/Pokemon/blob/25245b3338224723f90717a798c86db6f4292c8d/script.js#L34-L74
 
 displayGenerationButtons(): Displays buttons for guessing the Pokémon generation.
 generateRandomGenerations(correctGen): Generates an array of generations including the correct one and three incorrect ones.
@@ -34,14 +34,14 @@ shuffleArray(array): Shuffles the array to randomize the button order.
 getGenerationName(generation): Returns the name of a generation given its identifier.
 
 Handling User Guesses and Game Over:
-code
+https://github.com/Kambo22/Pokemon/blob/25245b3338224723f90717a798c86db6f4292c8d/script.js#L76-L102
 
 handleGuess(guessedGeneration): Checks if the user's guess is correct and handles the logic for correct and incorrect guesses.
 gameOver(): Displays the game over screen.
 resetGame(): Resets the game to allow for a new round.
 
 Event Listeners and Initialization:
-code
+https://github.com/Kambo22/Pokemon/blob/25245b3338224723f90717a798c86db6f4292c8d/script.js#L104-L110
 
 Event Listener: Adds an event listener to the "Play Again" button to reset the game.
 Initialization: Calls the functions to fetch a random Pokémon and display generation buttons when the page loads.
